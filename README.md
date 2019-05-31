@@ -33,19 +33,19 @@ Simple space war game with great concept.
 
 ### Screenshots
 
-#### 1. Main Menu
+#### Main Menu
 
 ![Main Menu](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/1.png)
 
-#### 2. Arena
+#### Arena
 
 ![Arena](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/2.png)
 
-#### 3. Scoreboard
+#### Scoreboard
 
 ![Scoreboard](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/3.png)
 
-#### 4. Tutorial
+#### Tutorial
 
 ![Tutorial](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/4.png)
 

@@ -12,10 +12,10 @@ Simple space war game with great concept.
    - [Requirements](#requirements)
    - [Usage](#usage)
    - [Screenshots](#screenshots)
-     1. [Main Menu](#main-menu)
-     2. [Arena](#arena)
-     3. [Scoreboard](#scoreboard)
-     4. [Tutorial](#tutorial)
+     1. [Main Menu](#1-main-menu)
+     2. [Arena](#2-arena)
+     3. [Scoreboard](#3-scoreboard)
+     4. [Tutorial](#4-tutorial)
 4. [Credits](#credits)
 5. [License](#license)
 
@@ -33,19 +33,19 @@ Simple space war game with great concept.
 
 ### Screenshots
 
-#### Main Menu
+#### 1 Main Menu
 
 ![Main Menu](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/1.png)
 
-#### Arena
+#### 2 Arena
 
 ![Arena](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/2.png)
 
-#### Scoreboard
+#### 3 Scoreboard
 
 ![Scoreboard](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/3.png)
 
-#### Tutorial
+#### 4 Tutorial
 
 ![Tutorial](https://borneodreamspacelaboratory.files.wordpress.com/2019/05/4.png)
 

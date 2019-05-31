@@ -51,10 +51,10 @@ Simple space war game with great concept.
 
 ## Credits
 
-1. Atallabela Yosua as Supervisor and Programmer
-2. Joshua Maha Sukma as Sprite Designer
+1. [Atallabela Yosua](https://github.com/A-Naive-Dreamer) as Supervisor and Programmer
+2. [Joshua Maha Sukma](https://github.com/NormalPerson01) as Sprite Designer
 3. Rizky Aulia Deva as Background Designer
-4. Brian Agustian as Audio Composer
+4. [Brian Agustian](https://github.com/codex191) as Audio Composer
 
 ## License
 

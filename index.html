@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="En-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            Start Menu
+        </title>
+        <link rel="stylesheet" type="text/css" href="./css/style-2.min.css" />
+    </head>
+    <body data-ng-app="borneoSpaceWar" data-ng-controller="startMenuController" data-ng-init="askPlayersName()">
+        <h1>
+            Borneo Space War
+        </h1>
+        <audio src="./assets/audio/soundtrack-3.mp3" id="soundtrack-3" loop="loop"></audio>
+        <button type="button" data-ng-click="goToGame()">Start</button><!--
+        --><button type="button" data-ng-click="goToScoreboard()">Scoreboard</button><!--
+        --><button type="button" data-ng-click="goToTutorial()">Tutorial</button><!--
+        --><button type="button" data-ng-click="goToCredits()">Credits</button><!--
+        --><script src="./libraries/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script src="./frameworks/angular/1.7.7/angular.min.js">
+        </script>
+        <script src="./js/functions.min.js">
+        </script>
+    </body>
+</html>

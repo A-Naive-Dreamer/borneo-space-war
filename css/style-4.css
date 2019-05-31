@@ -1,0 +1,75 @@
+    body {
+        background: url('./../assets/pictures/galaxy-1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        color: #008080;
+        font-family: 'Comic Sans MS', Arial, sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        margin: 50px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #800080;
+        font-family: 'Comic Sans MS', Arial, sans-serif;
+        font-size: 1.75em;
+        font-weight: 700;
+    }
+
+    li {
+        color: #800080;
+        font-family: 'Comic Sans MS', Arial, sans-serif;
+        font-size: 1.75em;
+        font-weight: 700;
+    }
+
+    kbd {
+        background: #434343;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 1em;
+        padding: 5px 20px;
+    }
+
+    button {
+        background: #800080;
+        border-top: 5px solid #00ffff;
+        border-right: 5px solid #00ffff;
+        border-bottom: 3px solid #00ffff;
+        border-left: 3px solid #00ffff;
+        border-radius: 10px;
+        color: #ffffff;
+        display: block;
+        font-family: 'Comic Sans MS', arial, sans-serif;
+        font-size: 1.5em;
+        font-weight: 700;
+        margin: 0 auto 50px;
+        width: 78px;
+    }
+
+    main {
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .centered {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        height: 420px;
+        margin: 50px auto;
+        overflow-y: scroll;
+        padding: 50px;
+        width: 800px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background: #600060;
+    }

@@ -1,0 +1,70 @@
+    body {
+        background: #414141;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    button {
+        background: #800080;
+        border: none;
+        border-top: 5px solid #00ffff;
+        border-right: 5px solid #00ffff;
+        border-bottom: 3px solid #00ffff;
+        border-left: 3px solid #00ffff;
+        border-radius: 10px;
+        color: #ffffff;
+        font-family: 'Comic Sans MS', arial, sans-serif;
+        font-size: 0.5em;
+        font-weight: 700;
+    }
+
+    .assets {
+        display: none;
+    }
+
+    #game {
+        background-image: url('./../assets/pictures/galaxy-2.png');
+        display: block;
+        margin: 0 auto;
+    }
+
+    #bar {
+        background: #00ffff;
+        margin: 0 auto;
+        width: 1191px;
+    }
+
+    .center {
+        margin: 0 auto;
+    }
+
+    .info {
+        color: #ffffff;
+        float: left;
+        font-family: 'Comic Sans MS', arial, sans-serif;
+        font-size: 3em;
+        font-weight: 700;
+        height: 75px;
+    }
+
+    #player-1-info {
+        background: repeating-linear-gradient(to left bottom, #ff00ff, #ff0000 50%);
+        width: 33%;
+    }
+
+    #player-2-info {
+        background: repeating-linear-gradient(to right bottom, #00ffff, #0000ff 50%);
+        width: 33%;
+    }
+
+    #timer {
+        background: radial-gradient(#008000, #00ff00);
+        width: 34%;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background: #600060;
+    }

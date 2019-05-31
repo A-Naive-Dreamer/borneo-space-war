@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="En-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+            Tutorial
+        </title>
+        <link rel="stylesheet" type="text/css" href="./../css/style-4.min.css" />
+    </head>
+    <body data-ng-app="borneoSpaceWar" data-ng-controller="tutorialController" data-ng-init="prepareTutorial()">
+        <h1>
+            Tutorial
+        </h1><!--
+        --><button type="button" data-ng-click="goToStartMenu()">Back</button><!--
+        --><audio src="./../assets/audio/soundtrack-2.mp3" id="soundtrack-2" loop="loop"></audio>
+        <main class="centered">
+            <ol>
+                <li>
+                    <h2>
+                        Players Movements
+                    </h2>
+                    <p>
+                        Use <kbd>a</kbd> for move Player 1 to right and <kbd>d</kbd> to left. Otherwise use <kbd>&#706;</kbd> for move Player 2 to right and <kbd>&#707;</kbd> to left.
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Players Shooting
+                    </h2>
+                    <p>
+                        Use <kbd>w</kbd> for Player 1 shooting and <kbd>&#708;</kbd> for Player 2 shooting.
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Game Over
+                    </h2>
+                    <p>
+                        Game over if all enemy have defeated, one or more player have defeated by other player shot, or timer is already timeout.
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Exception
+                    </h2>
+                    <p>
+                        If one player have defeated by enemies shot, game still run.
+                    </p>
+                </li>
+            </ol>
+        </main>
+        <script src="./../libraries/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script src="./../frameworks/angular/1.7.7/angular.min.js">
+        </script>
+        <script src="./../js/functions.min.js">
+        </script>
+    </body>
+</html>

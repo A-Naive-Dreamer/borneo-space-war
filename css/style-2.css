@@ -1,0 +1,40 @@
+    @font-face {
+        font-family: 'Magneto Bold';
+        src: url('./../fonts/magneto-bold.ttf');
+    }
+
+    body {
+        background: url('./../assets/pictures/galaxy-1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        color: #ff0000;
+        font-family: 'Magneto Bold', 'Comic Sans MS', arial, sans-serif;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    button {
+        background: #800080;
+        border-top: 5px solid #00ffff;
+        border-right: 5px solid #00ffff;
+        border-bottom: 3px solid #00ffff;
+        border-left: 3px solid #00ffff;
+        border-radius: 10px;
+        color: #ffffff;
+        display: block;
+        font-family: 'Comic Sans MS', arial, sans-serif;
+        font-size: 1.5em;
+        font-weight: 700;
+        height: 50px;
+        margin: 50px auto;
+        width: 250px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background: #600060;
+    }

@@ -1,6 +1,6 @@
 'use strict'
 
-var borneoSpaceWar = angular.module('borneoSpaceWar', [])
+let borneoSpaceWar = angular.module('borneoSpaceWar', [])
 
 borneoSpaceWar.constant('BODY', angular.element('body'))
 borneoSpaceWar.constant('CLOCK_IMAGES', angular.element('#clock > img'))

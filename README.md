@@ -10,6 +10,7 @@ Simple space war game with great concept.
 2. [Table of Contents](#table-of-contents)
 3. [Getting Started](#getting-started)
    - [Requirements](#requirements)
+   - [Installation](#installation)
    - [Usage](#usage)
    - [Screenshots](#screenshots)
      1. [Main Menu](#1-main-menu)
@@ -26,10 +27,17 @@ Simple space war game with great concept.
 1. Firefox 67.0 or latest version
 2. XAMPP 7.2.6
 
+### Installation
+
+1. Extract file ```borneo-space-war-master.zip``` in your Apache server root directory, example ```C:\xampp\htdocs```.
+2. Rename folder ```borneo-space-war-master``` to ```borneo-space-war```.
+
 ### Usage
 
-1. Type name of Player 1/Red and Player 2/Blue.
-2. Click Start Button.
+1. Type ```http://localhost/borneo-space-war/index.html``` in your browser url field.
+2. Type name of Player 1/Red and Player 2/Blue.
+3. Click ```Start``` Button.
+4. Click ```f11``` for fullscreen game.
 
 ### Screenshots
 

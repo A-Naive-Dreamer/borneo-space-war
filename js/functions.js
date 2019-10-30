@@ -8,7 +8,6 @@ borneoSpaceWar.constant('DATE', new Date())
 borneoSpaceWar.constant('DELAY_TIME', 1220)
 borneoSpaceWar.constant('ENEMY_BULLET_IMAGE', angular.element('#enemy-bullet > img'))
 borneoSpaceWar.constant('ENEMY_IMAGES', angular.element('#enemy > img'))
-borneoSpaceWar.constant('EXPLOSION', angular.element('#explosion'))
 borneoSpaceWar.constant('EXPLOSION_IMAGES', angular.element('#explosion > img'))
 borneoSpaceWar.constant('GAME', angular.element('#game'))
 borneoSpaceWar.constant('GAME_OVER', angular.element('#game-over'))
@@ -26,6 +25,7 @@ borneoSpaceWar.value('countdown', undefined)
 borneoSpaceWar.value('defeatedEnemiesNumber', 0)
 borneoSpaceWar.value('defeatedPlayersNumber', 0)
 borneoSpaceWar.value('enemies', [])
+borneoSpaceWar.value('firstClick', true)
 borneoSpaceWar.value('framesEnemiesBullets', [])
 borneoSpaceWar.value('framesExplosion', [])
 borneoSpaceWar.value('framesPlayer1', undefined)
@@ -33,7 +33,7 @@ borneoSpaceWar.value('framesPlayer2', undefined)
 borneoSpaceWar.value('framesPlayer1Bullets', [])
 borneoSpaceWar.value('framesPlayer2Bullets', [])
 borneoSpaceWar.value('framesEnemies', [])
-borneoSpaceWar.value('isGamePause', false)
+borneoSpaceWar.value('isGamePause', true)
 borneoSpaceWar.value('isGameStop', false)
 borneoSpaceWar.value('moveEnemies1', undefined)
 borneoSpaceWar.value('moveEnemies2', [])
@@ -159,9 +159,9 @@ borneoSpaceWar.controller('scoreboardController', function($scope, $window, BODY
     }
 })
 
-borneoSpaceWar.controller('gameController', function($interval, $scope, $window, CLOCK_IMAGES, DATE, DELAY_TIME, ENEMY_BULLET_IMAGE, ENEMY_IMAGES, EXPLOSION, EXPLOSION_IMAGES, GAME, GAME_OVER, PLAYER_1_BULLETS_IMAGE,
+borneoSpaceWar.controller('gameController', function($document, $interval, $scope, $window, CLOCK_IMAGES, DATE, DELAY_TIME, ENEMY_BULLET_IMAGE, ENEMY_IMAGES, EXPLOSION_IMAGES, GAME, GAME_OVER, PLAYER_1_BULLETS_IMAGE,
     PLAYER_2_BULLETS_IMAGE, PLAYER_1_IMAGES, PLAYER_2_IMAGES, PLAYERS_CONTROLLER, SOUNDTRACK_1, TIMER_CLOCK, countdown, defeatedEnemiesNumber, defeatedPlayersNumber, enemies,
-    framesEnemiesBullets, framesExplosion, framesPlayer1, framesPlayer2, framesPlayer1Bullets, framesPlayer2Bullets, framesEnemies, isGamePause, isGameStop, moveEnemies1, moveEnemies2, pointer1,
+    firstClick, framesEnemiesBullets, framesExplosion, framesPlayer1, framesPlayer2, framesPlayer1Bullets, framesPlayer2Bullets, framesEnemies, isGamePause, isGameStop, moveEnemies1, moveEnemies2, pointer1,
     player1Delay, player2Delay, pointer2, pointer3, pointer4, pointer5) {
     const CANVAS_WIDTH = parseInt(GAME.eq(0).attr('width')),
         CANVAS_HEIGHT = parseInt(GAME.eq(0).attr('height')),
@@ -379,7 +379,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
             }
         })()
 
-    $scope.action = 'Pause'
+    $scope.action = 'Start'
     $scope.player1Lives = 5
     $scope.player2Lives = 5
     $scope.player1Points = 0
@@ -857,6 +857,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
 
                                             if(defeatedPlayersNumber === 2) {
                                                 stopGame()
+                                                $window.alert('Game over, please click "Back" button for go back to main menu!')
                                             }
                                         }
 
@@ -939,6 +940,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
 
                                                 if(defeatedPlayersNumber === 2) {
                                                     stopGame()
+                                                    $window.alert('Game over, please click "Back" button for go back to main menu!')
                                                 }
                                             }
 
@@ -1022,6 +1024,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
 
                                             if(defeatedPlayersNumber === 2) {
                                                 stopGame()
+                                                $window.alert('Game over, please click "Back" button for go back to main menu!')
                                             }
                                         }
 
@@ -1103,6 +1106,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
 
                                                 if(defeatedPlayersNumber === 2) {
                                                     stopGame()
+                                                    $window.alert('Game over, please click "Back" button for go back to main menu!')
                                                 }
                                             }
 
@@ -1262,6 +1266,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
                             makeExplosion(PLAYER_2.getX(), PLAYER_2.getY(), PLAYER_2.getWidth(), PLAYER_2.getHeight())
 
                             stopGame()
+                            $window.alert('Game over, please click "Back" button for go back to main menu!')
                         }
 
                         PAINTER.clearRect(x, y, width, height)
@@ -1324,6 +1329,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
 
                             if(defeatedEnemiesNumber === enemies.length) {
                                 stopGame()
+                                $window.alert('All enemies are defeated, please click "Back" button for go back to main menu!')
                             }
                         }
                     }
@@ -1421,6 +1427,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
                             makeExplosion(PLAYER_1.getX(), PLAYER_1.getY(), PLAYER_1.getWidth(), PLAYER_1.getHeight())
 
                             stopGame()
+                            $window.alert('Game over, please click "Back" button for go back to main menu!')
                         }
 
                         PAINTER.clearRect(x, y, width, height)
@@ -1483,6 +1490,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
 
                             if(defeatedEnemiesNumber === enemies.length) {
                                 stopGame()
+                                $window.alert('All enemies are defeated, please click "Back" button for go back to main menu!')
                             }
                         }
                     }
@@ -1532,6 +1540,7 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
                 countdown = undefined
 
                 stopGame()
+                $window.alert('Time\'s up, please click "Back" button for go back to main menu!')
             }
         }, 1000)
     }
@@ -1585,6 +1594,14 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
         }
     }
 
+    $scope.askToStartGame = function() {
+        $window.alert('Please click "Start" button to start the game!')
+    }
+
+    $scope.goToFullscreen = function() {
+        $document[0].body.requestFullscreen()
+    }
+
     function pauseGame() {
         if(isGameStop) return
 
@@ -1596,6 +1613,12 @@ borneoSpaceWar.controller('gameController', function($interval, $scope, $window,
     function startGame() {
         if(isGameStop) return
 
+        if(firstClick) {
+            $document[0].body.requestFullscreen()
+            $scope.prepareGame()
+
+            firstClick = false
+        }
 
         $scope.action = 'Pause'
         isGamePause = false

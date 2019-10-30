@@ -1,141 +1,350 @@
 <!DOCTYPE html>
 <html lang="En-US">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-            Borneo Space War
-        </title>
-        <link rel="stylesheet" type="text/css" href="./../css/style-1.min.css" />
-    </head>
-    <body data-ng-app="borneoSpaceWar" data-ng-controller="gameController">
-        <audio src="./../assets/audio/soundtrack-1.mp3" id="soundtrack-1" loop="loop" class="assets" controls="controls"></audio>
-        <audio src="./../assets/audio/game-over.mp3" id="game-over" class="assets" controls="controls"></audio>
-        <div id="player-1" class="assets">
-            <img src="./../assets/pictures/player-1-frame-1.png" width="72" height="72" alt="Player 1"/>
-            <img src="./../assets/pictures/player-1-frame-2.png" width="72" height="72" alt="Player 1"/>
-            <img src="./../assets/pictures/player-1-frame-3.png" width="72" height="72" alt="Player 1"/>
-            <img src="./../assets/pictures/player-1-frame-4.png" width="72" height="72" alt="Player 1"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Borneo Space War
+    </title>
+    <link rel="stylesheet" type="text/css" href="./../css/style-1.min.css" />
+  </head>
+  <body data-ng-app="borneoSpaceWar" data-ng-controller="gameController">
+    <audio
+      src="./../assets/audio/soundtrack-1.mp3"
+      id="soundtrack-1"
+      loop="loop"
+      class="assets"
+      controls="controls"
+    ></audio>
+    <audio
+      src="./../assets/audio/game-over.mp3"
+      id="game-over"
+      class="assets"
+      controls="controls"
+    ></audio>
+    <div id="player-1" class="assets">
+      <img
+        src="./../assets/pictures/player-1-frame-1.png"
+        width="72"
+        height="72"
+        alt="Player 1"
+      />
+      <img
+        src="./../assets/pictures/player-1-frame-2.png"
+        width="72"
+        height="72"
+        alt="Player 1"
+      />
+      <img
+        src="./../assets/pictures/player-1-frame-3.png"
+        width="72"
+        height="72"
+        alt="Player 1"
+      />
+      <img
+        src="./../assets/pictures/player-1-frame-4.png"
+        width="72"
+        height="72"
+        alt="Player 1"
+      />
+    </div>
+    <div id="player-2" class="assets">
+      <img
+        src="./../assets/pictures/player-2-frame-1.png"
+        width="72"
+        height="72"
+        alt="Player 2"
+      />
+      <img
+        src="./../assets/pictures/player-2-frame-2.png"
+        width="72"
+        height="72"
+        alt="Player 2"
+      />
+      <img
+        src="./../assets/pictures/player-2-frame-3.png"
+        width="72"
+        height="72"
+        alt="Player 2"
+      />
+      <img
+        src="./../assets/pictures/player-2-frame-4.png"
+        width="72"
+        height="72"
+        alt="Player 2"
+      />
+    </div>
+    <div id="explosion" class="assets">
+      <img
+        src="./../assets/pictures/explosion-1.png"
+        width="72"
+        height="72"
+        alt="Explosion"
+      />
+      <img
+        src="./../assets/pictures/explosion-2.png"
+        width="72"
+        height="72"
+        alt="Explosion"
+      />
+      <img
+        src="./../assets/pictures/explosion-3.png"
+        width="72"
+        height="72"
+        alt="Explosion"
+      />
+      <img
+        src="./../assets/pictures/explosion-4.png"
+        width="72"
+        height="72"
+        alt="Explosion"
+      />
+      <img
+        src="./../assets/pictures/explosion-5.png"
+        width="72"
+        height="72"
+        alt="Explosion"
+      />
+    </div>
+    <div id="enemy-bullet" class="assets">
+      <img
+        src="./../assets/pictures/enemy-bullet.png"
+        width="10"
+        height="10"
+        alt="Enemy Bullet"
+      />
+    </div>
+    <div id="enemy" class="assets">
+      <img
+        src="./../assets/pictures/enemy-1.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-2.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-3.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-4.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-5.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-6.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-7.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+      <img
+        src="./../assets/pictures/enemy-8.png"
+        width="72"
+        height="72"
+        alt="Enemy"
+      />
+    </div>
+    <div id="clock" class="assets">
+      <img
+        src="./../assets/pictures/clock-1.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-2.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-3.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-4.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-5.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-6.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-7.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+      <img
+        src="./../assets/pictures/clock-8.png"
+        width="50"
+        height="50"
+        alt="Clock"
+      />
+    </div>
+    <div id="player-1-bullets" class="assets">
+      <img
+        src="./../assets/pictures/player-1-bullets.png"
+        width="72"
+        height="10"
+        alt="Player 1 Bullets"
+      />
+    </div>
+    <div id="player-2-bullets" class="assets">
+      <img
+        src="./../assets/pictures/player-2-bullets.png"
+        width="72"
+        height="10"
+        alt="Player 2 Bullets"
+      />
+    </div>
+    <input
+      type="text"
+      name="players_controller"
+      id="players-controller"
+      data-ng-model="playersController"
+      data-ng-keyup="movePlayers($event)"
+    />
+    <div id="bar">
+      <div id="player-1-info" class="info">
+        <div class="center">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./../assets/pictures/live.png"
+                    width="75"
+                    height="75"
+                    alt="Player 1 Lives"
+                  />
+                </td>
+                <td>
+                  {{ player1Lives }}
+                </td>
+                <td>
+                  <img
+                    src="./../assets/pictures/point.png"
+                    width="75"
+                    height="75"
+                    alt="Player 1 Points"
+                  />
+                </td>
+                <td>
+                  {{ player1Points }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div id="player-2" class="assets">
-            <img src="./../assets/pictures/player-2-frame-1.png" width="72" height="72" alt="Player 2"/>
-            <img src="./../assets/pictures/player-2-frame-2.png" width="72" height="72" alt="Player 2"/>
-            <img src="./../assets/pictures/player-2-frame-3.png" width="72" height="72" alt="Player 2"/>
-            <img src="./../assets/pictures/player-2-frame-4.png" width="72" height="72" alt="Player 2"/>
+      </div>
+      <div id="timer" class="info">
+        <div class="center">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./../assets/pictures/clock-1.png"
+                    id="timer-clock"
+                    width="50"
+                    height="50"
+                    alt="Clock"
+                  />
+                </td>
+                <td>{{ time }}s</td>
+                <td>
+                  <button type="button" data-ng-click="toggleGameState()">
+                    {{ action }}</button
+                  ><!---->&nbsp;<button
+                    type="button"
+                    data-ng-click="goToStartMenu()"
+                  >
+                    Back
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div id="explosion" class="assets">
-            <img src="./../assets/pictures/explosion-1.png" width="72" height="72" alt="Explosion" />
-            <img src="./../assets/pictures/explosion-2.png" width="72" height="72" alt="Explosion" />
-            <img src="./../assets/pictures/explosion-3.png" width="72" height="72" alt="Explosion" />
-            <img src="./../assets/pictures/explosion-4.png" width="72" height="72" alt="Explosion" />
-            <img src="./../assets/pictures/explosion-5.png" width="72" height="72" alt="Explosion" />
+      </div>
+      <div id="player-2-info" class="info">
+        <div class="center">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./../assets/pictures/live.png"
+                    width="75"
+                    height="75"
+                    alt="Player 2 Lives"
+                  />
+                </td>
+                <td>
+                  {{ player2Lives }}
+                </td>
+                <td>
+                  <img
+                    src="./../assets/pictures/point.png"
+                    width="75"
+                    height="75"
+                    alt="Player 2 Points"
+                  />
+                </td>
+                <td>
+                  {{ player2Points }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div id="enemy-bullet" class="assets">
-            <img src="./../assets/pictures/enemy-bullet.png" width="10" height="10" alt="Enemy Bullet" />
-        </div>
-        <div id="enemy" class="assets">
-            <img src="./../assets/pictures/enemy-1.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-2.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-3.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-4.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-5.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-6.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-7.png" width="72" height="72" alt="Enemy" />
-            <img src="./../assets/pictures/enemy-8.png" width="72" height="72" alt="Enemy" />
-        </div>
-        <div id="clock" class="assets">
-            <img src="./../assets/pictures/clock-1.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-2.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-3.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-4.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-5.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-6.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-7.png" width="50" height="50" alt="Clock" />
-            <img src="./../assets/pictures/clock-8.png" width="50" height="50" alt="Clock" />
-        </div>
-        <div id="player-1-bullets" class="assets">
-            <img src="./../assets/pictures/player-1-bullets.png" width="72" height="10" alt="Player 1 Bullets">
-        </div>
-        <div id="player-2-bullets" class="assets">
-            <img src="./../assets/pictures/player-2-bullets.png" width="72" height="10" alt="Player 2 Bullets">
-        </div>
-        <input type="text" name="players_controller" id="players-controller" data-ng-model="playersController" data-ng-keyup="movePlayers($event)" />
-        <div id="bar">
-            <div id="player-1-info" class="info">
-                <div class="center">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="./../assets/pictures/live.png" width="75" height="75" alt="Player 1 Lives" />
-                                </td>
-                                <td>
-                                    {{ player1Lives }}
-                                </td>
-                                <td>
-                                    <img src="./../assets/pictures/point.png" width="75" height="75" alt="Player 1 Points" />
-                                </td>
-                                <td>
-                                    {{ player1Points }}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="timer" class="info">
-                <div class="center">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="./../assets/pictures/clock-1.png" id="timer-clock" width="50" height="50" alt="Clock" />
-                                </td>
-                                <td>
-                                    {{ time }}s
-                                </td>
-                                <td>
-                                    <button type="button" data-ng-click="toggleGameState()">{{ action }}</button><!--
-                                    -->&nbsp;<button type="button" data-ng-click="goToStartMenu()">Back</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="player-2-info" class="info">
-                <div class="center">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="./../assets/pictures/live.png" width="75" height="75" alt="Player 2 Lives" />
-                                </td>
-                                <td>
-                                    {{ player2Lives }}
-                                </td>
-                                <td>
-                                    <img src="./../assets/pictures/point.png" width="75" height="75" alt="Player 2 Points" />
-                                </td>
-                                <td>
-                                    {{ player2Points }}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div style="clear: both">
-            </div>
-        </div>
-        <canvas id="game" width="1191" height="670" data-ng-init="prepareGame()" data-ng-click="activatePlayersController()">
-        </canvas>
-        <script src="./../libraries/jquery/3.3.1/jquery.min.js">
-        </script>
-        <script src="./../frameworks/angular/1.7.7/angular.min.js">
-        </script>
-        <script src="./../js/functions.min.js">
-        </script>
-    </body>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+    <canvas
+      id="game"
+      width="1191"
+      height="670"
+      data-ng-init="askToStartGame()"
+      data-ng-click="activatePlayersController()"
+    >
+    </canvas>
+    <script src="./../libraries/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./../frameworks/angular/1.7.7/angular.min.js"></script>
+    <script src="./../js/functions.min.js"></script>
+  </body>
 </html>
